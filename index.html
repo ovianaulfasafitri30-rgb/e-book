@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Book Ku | Solusi Belajar Pemula</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Menggunakan font Google agar aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav>
+        <div class="logo">E-Book Ku</div>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('about')">About</a></li>
+            <li><a href="#" onclick="showPage('produk')">Produk</a></li>
+            <li><a href="#" onclick="showPage('kontak')">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Halaman Utama (Home) -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <h1>Selamat datang di toko ebook kami</h1>
+            <p class="subtitle">kami menjual e-book untuk kamu disini</p>
+            <div class="content-box">
+                <h2>Judul Website: E-Book Ku</h2>
+                <p>E-Book Ku hadir sebagai jembatan ilmu bagi para pemula yang ingin menguasai berbagai bidang studi tanpa harus merasa terbebani oleh materi yang terlalu teknis. Kami percaya bahwa setiap orang berhak mendapatkan akses edukasi yang berkualitas namun tetap ringan dan mudah dicerna. Dengan materi yang disusun secara sistematis dan bahasa yang komunikatif, e-book kami dirancang untuk mempermudah perjalanan belajar Anda dari nol hingga mahir.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman About -->
+    <section id="about" class="page">
+        <div class="container">
+            <h2>Tentang E-Book Ku</h2>
+            <div class="about-content">
+                <p><strong>Latar Belakang:</strong> Nama usaha kami adalah <b>E-Book Ku</b>. Berawal dari keresahan melihat banyaknya materi belajar yang sulit dipahami oleh pemula, kami memutuskan untuk menyederhanakan cara belajar melalui platform digital. Kami ingin menghilangkan rasa takut akan topik-topik sulit dengan memberikan rangkuman yang esensial namun mendalam.</p>
+                <div class="visi-misi">
+                    <h3>Visi</h3>
+                    <p>"Menjadi platform edukasi digital terdepan yang mendemokratisasi akses pengetahuan melalui ringkasan materi yang cerdas dan inklusif."</p>
+                    <h3>Misi</h3>
+                    <p>Menghasilkan produk digital berkualitas tinggi yang mengedepankan kemudahan pemahaman, efisiensi waktu, dan kenyamanan visual bagi pembaca.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman Produk -->
+    <section id="produk" class="page">
+        <div class="container">
+            <h2>Produk Unggulan</h2>
+            <div class="product-grid">
+                <!-- Produk 1 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150x200?text=Ekonomi" alt="Ebook Ekonomi">
+                    <div class="product-info">
+                        <h3>Rangkuman Ekonomi</h3>
+                        <p>Membedah konsep mikro dan makro ekonomi dalam bahasa sehari-hari. Cocok untuk dasar bisnis.</p>
+                        <span class="price">Rp 40.000/pcs</span>
+                        <button class="cart-btn" onclick="orderNow('Rangkuman Ekonomi')">🛒 Tambah</button>
+                    </div>
+                </div>
+                <!-- Produk 2 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150x200?text=Informatika" alt="Ebook Informatika">
+                    <div class="product-info">
+                        <h3>Rangkuman Informatika Dasar</h3>
+                        <p>Belajar logika pemrograman dan dasar hardware secara cepat dan terarah bagi IT enthusiast.</p>
+                        <span class="price">Rp 45.000/pcs</span>
+                        <button class="cart-btn" onclick="orderNow('Informatika Dasar')">🛒 Tambah</button>
+                    </div>
+                </div>
+                <!-- Produk 3 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/150x200?text=Sosiologi" alt="Ebook Sosiologi">
+                    <div class="product-info">
+                        <h3>Rangkuman Sosiologi</h3>
+                        <p>Memahami interaksi sosial dan dinamika masyarakat dengan cara yang menyenangkan.</p>
+                        <span class="price">Rp 40.000/pcs</span>
+                        <button class="cart-btn" onclick="orderNow('Rangkuman Sosiologi')">🛒 Tambah</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman Kontak -->
+    <section id="kontak" class="page">
+        <div class="container">
+            <h2>Pemesanan E-Book</h2>
+            <form id="orderForm">
+                <input type="text" id="nama" placeholder="Nama Lengkap" required>
+                <input type="email" id="email" placeholder="Email Aktif" required>
+                <input type="text" id="pesanan" placeholder="Nama Pesanan (E-book apa)" required readonly>
+                <button type="submit" class="btn-submit">Kirim Pesanan Sekarang</button>
+            </form>
+            <div id="response" class="response-box" style="display: none;"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
